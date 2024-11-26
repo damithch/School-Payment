@@ -9,34 +9,32 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/PaymentDelete")
 public class PaymentDelete extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
-        String paymentIdStr = request.getParameter("payment_id");
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
-        try {
-          
-            int paymentId = Integer.parseInt(paymentIdStr);
+		String paymentIdStr = request.getParameter("payment_id");
 
-       
-            boolean isDeleted = PaymentDbUtil.deletePayment(paymentId);
+		try {
 
-           
-            if (isDeleted) {
-                response.sendRedirect("paymentDeltSuccessful.jsp"); 
-            } else {
-                response.sendRedirect("paymentDeltUnsuccessful.jsp"); 
-            }
-        } catch (NumberFormatException e) {
-           
-            request.setAttribute("errorMessage", "Invalid payment ID format: " + e.getMessage());
-            response.sendRedirect("paymentDeltUnsuccessful.jsp"); 
-        } catch (Exception e) {
-   
-            request.setAttribute("errorMessage", "An error occurred while deleting the payment: " + e.getMessage());
-            response.sendRedirect("paymentDeltUnsuccessful.jsp"); 
-        }
-    }
+			int paymentId = Integer.parseInt(paymentIdStr);
+
+			boolean isDeleted = PaymentDbUtil.deletePayment(paymentId);
+
+			if (isDeleted) {
+				response.sendRedirect("paymentDeltSuccessful.jsp");
+			} else {
+				response.sendRedirect("paymentDeltUnsuccessful.jsp");
+			}
+		} catch (NumberFormatException e) {
+
+			request.setAttribute("errorMessage", "Invalid payment ID format: " + e.getMessage());
+			response.sendRedirect("paymentDeltUnsuccessful.jsp");
+		} catch (Exception e) {
+
+			request.setAttribute("errorMessage", "An error occurred while deleting the payment: " + e.getMessage());
+			response.sendRedirect("paymentDeltUnsuccessful.jsp");
+		}
+	}
 }

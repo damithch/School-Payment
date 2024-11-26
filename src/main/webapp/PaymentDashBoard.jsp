@@ -102,7 +102,7 @@
 <body>
     <div class="header">
         <h1>School Information Management System</h1>
-        <button class="logout" onclick="window.location.href='logout.jsp'">Log Out</button>
+        <button class="logout" onclick="window.location.href='AdminLogin.jsp'">Log Out</button>
     </div>
     <div class="dashboard">
         <div class="tile"><a href="readPayments.jsp">Read Payment Information</a></div>

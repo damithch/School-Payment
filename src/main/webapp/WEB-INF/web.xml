@@ -7,7 +7,7 @@
 
     <!-- Welcome File List -->
     <welcome-file-list>
-        <welcome-file>PaymentDashBoard.jsp</welcome-file>
+        <welcome-file>AdminLogin.jsp</welcome-file>
     </welcome-file-list>
 
 </web-app>

@@ -3,87 +3,85 @@ package com.payment;
 import java.math.BigDecimal;
 
 public class Payment {
-    private int id; 
-    private String studentId;
-    private BigDecimal paymentAmount;
-    private String paymentDate;
-    private String paymentMethod;
-    private String paymentStatus;
-    private String receiptNumber;
-    private String paymentReference;
-    private String paymentNotes;
+	private int id;
+	private String studentId;
+	private BigDecimal paymentAmount;
+	private String paymentDate;
+	private String paymentMethod;
+	private String paymentStatus;
+	private String receiptNumber;
+	private String paymentReference;
+	private String paymentNotes;
 
-    
+	public int getId() {
+		return id;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public String getStudentId() {
+		return studentId;
+	}
 
-    public String getStudentId() {
-        return studentId;
-    }
+	public void setStudentId(String studentId) {
+		this.studentId = studentId;
+	}
 
-    public void setStudentId(String studentId) {
-        this.studentId = studentId;
-    }
+	public BigDecimal getPaymentAmount() {
+		return paymentAmount;
+	}
 
-    public BigDecimal getPaymentAmount() {
-        return paymentAmount;
-    }
+	public void setPaymentAmount(BigDecimal paymentAmount) {
+		this.paymentAmount = paymentAmount;
+	}
 
-    public void setPaymentAmount(BigDecimal paymentAmount) {
-        this.paymentAmount = paymentAmount;
-    }
+	public String getPaymentDate() {
+		return paymentDate;
+	}
 
-    public String getPaymentDate() {
-        return paymentDate;
-    }
+	public void setPaymentDate(String paymentDate) {
+		this.paymentDate = paymentDate;
+	}
 
-    public void setPaymentDate(String paymentDate) {
-        this.paymentDate = paymentDate;
-    }
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
 
-    public String getPaymentMethod() {
-        return paymentMethod;
-    }
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
 
-    public void setPaymentMethod(String paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
+	public String getPaymentStatus() {
+		return paymentStatus;
+	}
 
-    public String getPaymentStatus() {
-        return paymentStatus;
-    }
+	public void setPaymentStatus(String paymentStatus) {
+		this.paymentStatus = paymentStatus;
+	}
 
-    public void setPaymentStatus(String paymentStatus) {
-        this.paymentStatus = paymentStatus;
-    }
+	public String getReceiptNumber() {
+		return receiptNumber;
+	}
 
-    public String getReceiptNumber() {
-        return receiptNumber;
-    }
+	public void setReceiptNumber(String receiptNumber) {
+		this.receiptNumber = receiptNumber;
+	}
 
-    public void setReceiptNumber(String receiptNumber) {
-        this.receiptNumber = receiptNumber;
-    }
+	public String getPaymentReference() {
+		return paymentReference;
+	}
 
-    public String getPaymentReference() {
-        return paymentReference;
-    }
+	public void setPaymentReference(String paymentReference) {
+		this.paymentReference = paymentReference;
+	}
 
-    public void setPaymentReference(String paymentReference) {
-        this.paymentReference = paymentReference;
-    }
+	public String getPaymentNotes() {
+		return paymentNotes;
+	}
 
-    public String getPaymentNotes() {
-        return paymentNotes;
-    }
-
-    public void setPaymentNotes(String paymentNotes) {
-        this.paymentNotes = paymentNotes;
-    }
+	public void setPaymentNotes(String paymentNotes) {
+		this.paymentNotes = paymentNotes;
+	}
 }

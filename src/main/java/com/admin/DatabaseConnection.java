@@ -1,4 +1,4 @@
-package com.payment;
+package com.admin;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,10 +10,8 @@ public class DatabaseConnection {
 	private static final String DB_USER = "root";
 	private static final String DB_PASSWORD = "damith";
 
-	// Singleton instance of the connection
 	private static Connection connection = null;
 
-	// Load MySQL JDBC Driver
 	static {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -23,11 +21,9 @@ public class DatabaseConnection {
 		}
 	}
 
-	// Private constructor to prevent instantiation
 	private DatabaseConnection() {
 	}
 
-	// Method to get a connection to the database (Singleton)
 	public static Connection getConnection() throws SQLException {
 		if (connection == null || connection.isClosed()) {
 			synchronized (DatabaseConnection.class) {
